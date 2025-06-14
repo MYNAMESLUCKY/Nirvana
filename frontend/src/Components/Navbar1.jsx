@@ -43,19 +43,21 @@ export default function Navbar1() {
       <section className="flex items-center justify-center h-full text-indigo-50">
         <motion.h1
           ref={welcomeTextRef}
-          className="inline-block font-bold text-4xl"
+          className="inline-block font-bold text-7xl text-yellow-500"
           style={{
-            background: "linear-gradient(to right, #60a5fa, #BB3E00, #c7d2fe)", // Custom gradient
+            // Custom gradient
             backgroundClip: "text",
-            color: "transparent",
+           
           }}
         >
-        CREATE A SAFE WORLD WITH US 
-              AND
-      <br></br>EMABARK ON A JOURNEY OF NIRVANA
+       "CREATE A SAFE WORLD WITH U"
+                
+     
         </motion.h1>
-      </section>
-      <div></div>
+    </section>
+ <div className="bg-amber-600">
+
+ </div>
 
       {/* Bottom Navbar */}
       <div className="fixed bottom-0 left-0 w-full bg-gradient-to-r from-blue-50 via-white to-blue-50 p-4 shadow-lg z-50 border-t border-blue-200">
