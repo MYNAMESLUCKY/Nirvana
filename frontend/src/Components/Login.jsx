@@ -1,9 +1,11 @@
 import React, { useState } from "react";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
+import {useAuth} from "../context/AuthContext";
 
 export default function Login() {
   const navigate = useNavigate();
+  const {login} = useAuth();
 
   const [formData, setFormData] = useState({
     email: "",
@@ -28,8 +30,7 @@ export default function Login() {
       );
       localStorage.setItem("authToken", response.data.token);
       setStatus({ loading: false, message: response.data.message });
-      alert("Login successful! Redirecting to dashboard...");
-      navigate("/home"); // Redirect to dashboard
+      navigate("/home"); // Directly navigate to dashboard
     } catch (error) {
       setStatus({
         loading: false,
